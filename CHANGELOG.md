@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.0...1.0.1) (2020-01-18)
+
+
+### Bug Fixes
+
+* remove console.log ([f7571e8](https://github.com/etclabscore/gatsby-theme-pristine/commit/f7571e808295acae69be23e1d794df1ac06892da))
+
 # 1.0.0 (2020-01-18)
 
 
