@@ -68,8 +68,6 @@ workflows:
     jobs:
       - test:
           filters: *filter-only-master
-      - build:
-          filters: *filter-only-master
       - hold:
           filters: *filter-only-master
           type: approval
