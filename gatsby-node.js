@@ -73,7 +73,6 @@ exports.createPages = ({ graphql, actions, reporter }) => {
       const links = result.data.site.siteMetadata.menuLinks;
       allPages.forEach(({ node }) => {
         const slug = _.get(node, `fields.slug`);
-        console.log(node, slug);
         if (!slug) return;
         const docIndex = links.findIndex(findDoc, {
           link: slug
@@ -89,7 +88,6 @@ exports.createPages = ({ graphql, actions, reporter }) => {
         if (nextAndPrev.next && nextAndPrev.next.ignoreNextPrev) {
           delete nextAndPrev.next;
         }
-        console.log("defaulttejplkatpath", docIndex, nextAndPrev, node.fields.slug);
         createPage({
           path: `${node.fields.slug}`, // required
           component: slash(defaultTemplate),
@@ -120,21 +118,18 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
     } else {
       slug = `/${parsedFilePath.dir}`
     }
-    console.log("slug for  ", node.absolutePath, slug);
     if (slug) {
       return createNodeField({ node, name: `slug`, value: slug })
     }
   }
   if (isMarkdown) {
     const parsedFilePath = path.parse(node.fileAbsolutePath)
-    console.log(parsedFilePath);
     if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
       slug = `/${parsedFilePath.name}`
     } else {
       slug = `/${parsedFilePath.name}`
     }
 
-    console.log("slug for  ", node.fileAbsolutePath, slug);
     return createNodeField({ node, name: `slug`, value: slug });
   }
 
