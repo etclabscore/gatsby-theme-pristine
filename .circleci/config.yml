@@ -39,17 +39,6 @@ jobs:
       - run: ./node_modules/.bin/codecov
       - save_cache: *save-deps-cache
 
-  build:
-    <<: *defaults
-    docker:
-      - image: circleci/node:10
-    steps:
-      - checkout
-      - restore_cache: *restore-deps-cache
-      - run: npm install
-      - run: npm run build
-      - save_cache: *save-deps-cache
-
   release:
     <<: *defaults
     docker:
@@ -57,24 +46,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install Headless Chrome dependencies
-          command: |
-            sudo apt-get install -yq \
-            gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
-            libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
-            libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
-            libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
-            fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
-      - run:
           name: "Update Node.js and npm"
           command: |
             curl -sSL "https://nodejs.org/dist/v10.15.3/node-v10.15.3-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v10.15.3-linux-x64/bin/node
             curl https://www.npmjs.com/install.sh | sudo bash
       - restore_cache: *restore-deps-cache
-      - run: sudo apt-get install -y graphviz
-      - run: cargo install svgbob_cli
       - run: npm install
-      - run: npm run build -- --prefix-paths
       - run: npm install semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/commit-analyzer @semantic-release/release-notes-generator @qiwi/semantic-release-gh-pages-plugin
       - run: git checkout .
       - run: ./node_modules/.bin/semantic-release
@@ -85,8 +62,6 @@ workflows:
   analysis:
     jobs:
       - test:
-          filters: *filter-only-semantic-pr
-      - build:
           filters: *filter-only-semantic-pr
 
   release:
@@ -100,7 +75,6 @@ workflows:
           type: approval
           requires:
             - test
-            - build
       - release:
           filters: *filter-only-master
           requires:
