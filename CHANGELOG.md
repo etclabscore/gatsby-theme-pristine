@@ -1,3 +1,19 @@
+# 1.0.0 (2020-01-18)
+
+
+### Bug Fixes
+
+* remove CI step ([3c67003](https://github.com/etclabscore/gatsby-theme-pristine/commit/3c67003c0c57f1c0b73a4ef0d3f5be04c257c6a0))
+* **CI:** remove gh-pages release step ([1a31557](https://github.com/etclabscore/gatsby-theme-pristine/commit/1a315579ef8c935f940e79b047ebf2700f8dc18d))
+* **CI:** remove unneeded CI steps ([f2da3e1](https://github.com/etclabscore/gatsby-theme-pristine/commit/f2da3e1c2795ce57701f85ed82e0ba00a8ef48c8))
+* **package.json:** public publish ([81e75ac](https://github.com/etclabscore/gatsby-theme-pristine/commit/81e75ac4a905bc7a771529a4bb78b837d3d63d0b))
+* **README:** add install and usage instructions ([3ca639e](https://github.com/etclabscore/gatsby-theme-pristine/commit/3ca639ef1cd8dc6d87b16515d4fe516dda411494))
+
+
+### Features
+
+* Initial Commit ([e6c22ff](https://github.com/etclabscore/gatsby-theme-pristine/commit/e6c22ff461ec59d02f4819a56c09b249ef6cb576))
+
 ## [1.1.1](https://github.com/etclabscore/pristine-typescript-gatsby-react-material-ui/compare/1.1.0...1.1.1) (2020-01-18)
 
 
