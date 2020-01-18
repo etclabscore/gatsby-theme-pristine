@@ -1,0 +1,27 @@
+
+.anchor {
+  padding-right: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #666;
+  z-index: 1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.logo {
+  animation: fadein 5s;
+}
+
+@keyframes fadein {
+   from { opacity: 0 }
+   to { opacity: 1 }
+}
