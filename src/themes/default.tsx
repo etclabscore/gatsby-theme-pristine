@@ -1,29 +1,39 @@
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import grey from "@material-ui/core/colors/grey";
 
+const headerFontWeight = 400;
+
 const typography = {
   h1: {
-    fontSize: "4rem",
+    fontSize: "2.25rem",
+    fontWeight: headerFontWeight,
   },
   h2: {
-    fontSize: "3.5rem",
+    fontSize: "2rem",
+    letterSpacing: "0",
+    fontWeight: headerFontWeight,
   },
   h3: {
-    fontSize: "3rem",
+    fontSize: "1.75rem",
+    fontWeight: headerFontWeight,
   },
   h4: {
-    fontSize: "2.5rem",
+    fontSize: "1.5rem",
+    fontWeight: headerFontWeight,
   },
   h5: {
-    fontSize: "2rem",
+    fontSize: "1.25rem",
+    fontWeight: headerFontWeight,
   },
   h6: {
-    fontSize: "1.5rem",
+    fontSize: "1.1rem",
+    fontWeight: headerFontWeight,
   },
   body1: {
     fontSize: "1rem",
   },
   fontSize: 20,
+  fontWeightRegular: 250,
 };
 
 export const lightTheme = responsiveFontSizes(createMuiTheme({
@@ -43,6 +53,9 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
     },
   },
   palette: {
+    text: {
+      primary: grey[900],
+    },
     background: {
       default: "#fff",
     },
@@ -61,13 +74,16 @@ export const darkTheme = responsiveFontSizes(createMuiTheme({
   },
   palette: {
     type: "dark",
+    text: {
+      primary: grey[400],
+    },
     background: {
       default: grey[900],
       paper: grey[800],
     },
   },
   overrides: {
-   MuiTable: {
+    MuiTable: {
       root: {
         background: "transparent !important",
       },
