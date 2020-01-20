@@ -63,7 +63,7 @@ const Layout: React.FC = ({ children }) => {
         <AppBar position="fixed" color="default" elevation={0}>
           <Toolbar>
             <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon />
+              <MenuIcon fontSize="small"/>
             </IconButton>
             <Grid container alignContent="center" alignItems="center" justify="space-between">
               <Grid item container direction="row" xs={4}>
@@ -88,7 +88,7 @@ const Layout: React.FC = ({ children }) => {
               <Grid item>
                 <Tooltip title={"Toggle Dark Mode"}>
                   <IconButton onClick={darkMode.toggle}>
-                    {darkMode.value ? <Brightness3Icon /> : <WbSunnyIcon />}
+                    {darkMode.value ? <Brightness3Icon fontSize="small"/> : <WbSunnyIcon fontSize="small"/>}
                   </IconButton>
                 </Tooltip>
               </Grid>

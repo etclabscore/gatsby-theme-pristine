@@ -17,7 +17,7 @@ const Footer: React.FC<IProps> = (props) => {
   const smallQuery = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
-    <Grid container spacing={10} style={{marginTop: "60px", marginBottom: "30px", padding: smallQuery ? "" : "30px"}} direction={smallQuery ? "row" : "column"}>
+    <Grid container spacing={10} style={{marginTop: "10px", marginBottom: "10px", padding: smallQuery ? "" : "30px"}} direction={smallQuery ? "row" : "column"}>
       {props.footerLinks.map((footerLink) => {
         return (
           <Link href={footerLink.link} style={{paddingRight: "15px", fontSize: "16px"}} color="textSecondary">{footerLink.name}</Link>
