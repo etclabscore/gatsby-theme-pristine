@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.1...1.0.2) (2020-01-20)
+
+
+### Bug Fixes
+
+* add footer + add styles ([00a6529](https://github.com/etclabscore/gatsby-theme-pristine/commit/00a6529d5f22bfbabc13de7157025df7f59a3187))
+
 ## [1.0.1](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.0...1.0.1) (2020-01-18)
 
 
