@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby";
-import { Drawer, List, ListItem, ListItemText, Typography } from "@material-ui/core";
+import { Drawer, List, ListItem, ListItemText, Typography, Grid } from "@material-ui/core";
 import { useTheme } from "@material-ui/styles";
 
 interface IProps {
@@ -14,6 +14,7 @@ const Sidebar: React.FC<IProps> = ({ children, open, onClose }) => {
       site {
         siteMetadata {
           title
+          logoUrl
           menuLinks {
             name
             link
@@ -26,9 +27,16 @@ const Sidebar: React.FC<IProps> = ({ children, open, onClose }) => {
 
   return (
     <Drawer open={open} onClose={onClose}>
-      <Typography color="textSecondary" variant="h6" style={{ paddingLeft: "20px", paddingTop: "20px" }}>
-        {data.site.siteMetadata.title}
-      </Typography>
+      <Grid container style={{ paddingLeft: "20px", paddingTop: "20px" }}>
+        <img
+          alt="logo"
+          height="30"
+          style={{paddingRight: "10px"}}
+          src={data.site.siteMetadata.logoUrl} />
+        <Typography color="textSecondary" variant="h6">
+          {data.site.siteMetadata.title}
+        </Typography>
+      </Grid>
       <List style={{ minWidth: "250px" }}>
         {data.site.siteMetadata.menuLinks.map((menuLink: any) => (
           <GatsbyLink

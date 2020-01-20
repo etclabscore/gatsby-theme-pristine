@@ -10,6 +10,7 @@ import CodeBlock from "../components/CodeBlock";
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby";
 import Sidebar from "../components/Sidebar";
 import "./index.css";
+import Footer from "../components/Footer";
 
 const Layout: React.FC = ({ children }) => {
   const darkMode = useDarkMode();
@@ -40,11 +41,16 @@ const Layout: React.FC = ({ children }) => {
   const [open, setOpen] = useState();
 
   const data = useStaticQuery(graphql`
-    query LayouQuery {
+    query LayoutQuery {
       site {
         siteMetadata {
           title
           description
+          logoUrl
+          footerLinks {
+            name
+            link
+          }
         }
       }
     }
@@ -60,11 +66,24 @@ const Layout: React.FC = ({ children }) => {
               <MenuIcon />
             </IconButton>
             <Grid container alignContent="center" alignItems="center" justify="space-between">
-              <GatsbyLink to="/" style={{ textDecoration: "none" }}>
-                <Typography color="textSecondary" variant="h6">
-                  {data.site.siteMetadata.title}
-                </Typography>
-              </GatsbyLink>
+              <Grid item container direction="row" xs={4}>
+                <Grid style={{paddingRight: "5px"}}>
+                  <img
+                    alt="logo"
+                    height="30"
+                    style={{
+                      marginTop: "6px",
+                    }}
+                    src={data.site.siteMetadata.logoUrl} />
+                </Grid>
+                <Grid style={{marginTop: "7px"}}>
+                  <GatsbyLink to="/" style={{ textDecoration: "none" }}>
+                    <Typography color="textSecondary" variant="h6">
+                      {data.site.siteMetadata.title}
+                    </Typography>
+                  </GatsbyLink>
+                </Grid>
+              </Grid>
               <Typography variant="caption">{data.site.siteMetadata.description}</Typography>
               <Grid item>
                 <Tooltip title={"Toggle Dark Mode"}>
@@ -80,6 +99,7 @@ const Layout: React.FC = ({ children }) => {
           <CssBaseline />
           <div style={{ padding: "30px", paddingTop: "64px" }}>
             {children}
+            <Footer footerLinks={data.site.siteMetadata.footerLinks} />
           </div>
         </Container>
       </MuiThemeProvider >

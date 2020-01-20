@@ -23,7 +23,7 @@ const styles = {
 
 const NextAndPrev: React.FC<IProps> = (props) => {
   return (
-    <Grid container justify="space-between" style={{paddingTop: "40px"}}>
+    <Grid container justify="space-between" style={{paddingTop: "40px", paddingBottom: "40px"}}>
       <Box style={{ visibility: props.prev ? "visible" : "hidden" }}>
         <Typography gutterBottom>Previous</Typography>
         {props.prev &&

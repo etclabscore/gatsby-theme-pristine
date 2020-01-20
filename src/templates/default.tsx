@@ -21,10 +21,10 @@ const DefaultTemplate: React.FC<IProps> = ({ children, pageContext, data }) => {
   const page = data.mdx;
 
   return (
-    <Layout>
+    <>
       <MDXRenderer slug={page.fields.slug}>{page.body}</MDXRenderer>
       <NextAndPrev prev={pageContext.prev} next={pageContext.next} />
-    </Layout>
+    </>
   );
 };
 
