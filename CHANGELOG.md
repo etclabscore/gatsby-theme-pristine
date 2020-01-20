@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.2...1.0.3) (2020-01-20)
+
+
+### Bug Fixes
+
+* icon sizes ([deae20e](https://github.com/etclabscore/gatsby-theme-pristine/commit/deae20e2015ecd286b01e72d1d0709ec52d845eb))
+
 ## [1.0.2](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.1...1.0.2) (2020-01-20)
 
 
