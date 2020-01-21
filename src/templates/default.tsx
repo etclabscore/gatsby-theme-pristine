@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import useDarkMode from "use-dark-mode";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -17,7 +17,6 @@ interface IProps {
 
 const DefaultTemplate: React.FC<IProps> = ({ children, pageContext, data }) => {
   const darkMode = useDarkMode();
-  const theme = darkMode.value ? darkTheme : lightTheme;
   const page = data.mdx;
 
   return (
