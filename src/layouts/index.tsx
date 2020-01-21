@@ -11,6 +11,7 @@ import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby";
 import Sidebar from "../components/Sidebar";
 import "./index.css";
 import Footer from "../components/Footer";
+import Search from "../components/Search";
 
 const Layout: React.FC = ({ children }) => {
   const darkMode = useDarkMode();
@@ -55,6 +56,7 @@ const Layout: React.FC = ({ children }) => {
       }
     }
   `);
+  document.title = data.site.siteMetadata.title;
 
   return (
     <MDXProvider components={components}>
@@ -63,11 +65,11 @@ const Layout: React.FC = ({ children }) => {
         <AppBar position="fixed" color="default" elevation={0}>
           <Toolbar>
             <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon fontSize="small"/>
+              <MenuIcon fontSize="small" />
             </IconButton>
             <Grid container alignContent="center" alignItems="center" justify="space-between">
               <Grid item container direction="row" xs={4}>
-                <Grid style={{paddingRight: "5px"}}>
+                <Grid style={{ paddingRight: "5px" }}>
                   <img
                     alt="logo"
                     height="30"
@@ -76,7 +78,7 @@ const Layout: React.FC = ({ children }) => {
                     }}
                     src={data.site.siteMetadata.logoUrl} />
                 </Grid>
-                <Grid style={{marginTop: "7px"}}>
+                <Grid style={{ marginTop: "7px" }}>
                   <GatsbyLink to="/" style={{ textDecoration: "none" }}>
                     <Typography color="textSecondary" variant="h6">
                       {data.site.siteMetadata.title}
@@ -84,11 +86,11 @@ const Layout: React.FC = ({ children }) => {
                   </GatsbyLink>
                 </Grid>
               </Grid>
-              <Typography variant="caption">{data.site.siteMetadata.description}</Typography>
-              <Grid item>
+              <Grid item container direction="row" xs={8} justify="flex-end" alignItems="center">
+                <Search />
                 <Tooltip title={"Toggle Dark Mode"}>
                   <IconButton onClick={darkMode.toggle}>
-                    {darkMode.value ? <Brightness3Icon fontSize="small"/> : <WbSunnyIcon fontSize="small"/>}
+                    {darkMode.value ? <Brightness3Icon fontSize="small" /> : <WbSunnyIcon fontSize="small" />}
                   </IconButton>
                 </Tooltip>
               </Grid>
