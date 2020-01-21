@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.1...1.1.2) (2020-01-21)
+
+
+### Bug Fixes
+
+* document title setting ([166085e](https://github.com/etclabscore/gatsby-theme-pristine/commit/166085eb20536eaca4158239073a6e4e02789470))
+
 ## [1.1.1](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.0...1.1.1) (2020-01-21)
 
 
