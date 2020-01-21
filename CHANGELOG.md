@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.3...1.1.0) (2020-01-21)
+
+
+### Features
+
+* add search ([be9c714](https://github.com/etclabscore/gatsby-theme-pristine/commit/be9c714a6f3d465a9bebf87fed9217d30509ad16))
+
 ## [1.0.3](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.2...1.0.3) (2020-01-20)
 
 
