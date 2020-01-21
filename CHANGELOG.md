@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.0...1.1.1) (2020-01-21)
+
+
+### Bug Fixes
+
+* remove roboto ([0c50014](https://github.com/etclabscore/gatsby-theme-pristine/commit/0c50014d17fc2de21755666e505e545daff6a6ec))
+
 # [1.1.0](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.0.3...1.1.0) (2020-01-21)
 
 
