@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useStaticQuery, graphql, Link as GatsbyLink, navigate } from "gatsby";
-import { List, ListItem, ListItemText, Input, Popper, Paper, InputBase } from "@material-ui/core";
-import { useFlexSearch } from "react-use-flexsearch";
+import { List, ListItem, ListItemText, Popper, Paper, InputBase } from "@material-ui/core";
 import _ from "lodash";
+const { useFlexSearch } = require("react-use-flexsearch"); //tslint:disable-line
 
 const Search: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -28,11 +28,6 @@ const Search: React.FC = () => {
   );
   const open = Boolean(anchorEl);
   const selected = selectedItem || results[0];
-  useEffect(() => {
-    if (query) {
-      setSelectedItem(null);
-    }
-  }, [query]);
 
   return (
     <div style={{ marginRight: "5px" }}>
@@ -42,21 +37,23 @@ const Search: React.FC = () => {
           if (ev.keyCode === 13) {
             if (selected) {
               setQuery("");
-              anchorEl.blur();
-              setAnchorEl(null);
+              if (anchorEl !== null) {
+                (anchorEl as any).blur();
+                setAnchorEl(null);
+              }
               navigate(selected.slug);
             }
           } else if (ev.keyCode === 40) {
             // Down
             const currIndex = _.findIndex(results, (result: any) => result.id === selected.id);
-            const newSelected =  results[currIndex + 1];
+            const newSelected = results[currIndex + 1];
             if (newSelected) {
               setSelectedItem(newSelected);
             }
           } else if (ev.keyCode === 38) {
             // Up
             const currIndex = _.findIndex(results, (result: any) => result.id === selected.id);
-            const newSelected =  results[currIndex - 1];
+            const newSelected = results[currIndex - 1];
             if (newSelected) {
               setSelectedItem(newSelected);
             }
