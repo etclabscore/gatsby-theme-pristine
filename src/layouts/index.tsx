@@ -56,7 +56,6 @@ const Layout: React.FC = ({ children }) => {
       }
     }
   `);
-  document.title = data.site.siteMetadata.title;
 
   return (
     <MDXProvider components={components}>
