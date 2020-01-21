@@ -34,6 +34,7 @@ const typography = {
   },
   fontSize: 20,
   fontWeightRegular: 250,
+  fontFamily: ["Helvetica", "Arial", "San-Serif"].join(","),
 };
 
 export const lightTheme = responsiveFontSizes(createMuiTheme({

@@ -16,7 +16,6 @@ interface IProps {
 }
 
 const DefaultTemplate: React.FC<IProps> = ({ children, pageContext, data }) => {
-  const darkMode = useDarkMode();
   const page = data.mdx;
 
   return (
