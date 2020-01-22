@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.3...1.1.4) (2020-01-22)
+
+
+### Bug Fixes
+
+* add primary/secondary color config ([b310be2](https://github.com/etclabscore/gatsby-theme-pristine/commit/b310be2618fafffaa02bc760ae11d7e43ac005fd))
+
 ## [1.1.3](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.2...1.1.3) (2020-01-22)
 
 
