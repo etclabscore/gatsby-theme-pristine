@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.2...1.1.3) (2020-01-22)
+
+
+### Bug Fixes
+
+* hide search on mobile ([85e29d8](https://github.com/etclabscore/gatsby-theme-pristine/commit/85e29d8eebd8739f3b8c3e9b8c8f3516be360832))
+
 ## [1.1.2](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.1...1.1.2) (2020-01-21)
 
 
