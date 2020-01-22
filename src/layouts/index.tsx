@@ -49,6 +49,8 @@ const Layout: React.FC = ({ children }) => {
           title
           description
           logoUrl
+          primaryColor
+          secondaryColor
           footerLinks {
             name
             link
@@ -60,7 +62,20 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <MDXProvider components={components}>
-      <MuiThemeProvider theme={theme}>
+      <MuiThemeProvider theme={{
+        ...theme,
+        palette: {
+          ...theme.palette,
+          primary: {
+            ...theme.palette.primary,
+            main: data.site.siteMetadata.primaryColor,
+          },
+          secondary: {
+            ...theme.palette.secondary,
+            main: data.site.siteMetadata.secondaryColor,
+          }
+        }
+      }}>
         <Sidebar open={open} onClose={() => setOpen(false)} />
         <AppBar position="fixed" color="default" elevation={0}>
           <Toolbar>
