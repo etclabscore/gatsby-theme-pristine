@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MuiThemeProvider, AppBar, Toolbar, Typography, IconButton, Tooltip, CssBaseline, Grid, Table, TableRow, TableBody, TableCell, TableHead, Link, Divider, Drawer, Container } from "@material-ui/core"; //tslint:disable-line
+import { MuiThemeProvider, AppBar, Toolbar, Typography, IconButton, Tooltip, CssBaseline, Grid, Table, TableRow, TableBody, TableCell, TableHead, Link, Divider, Container, Hidden } from "@material-ui/core"; //tslint:disable-line
 import useDarkMode from "use-dark-mode";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -12,6 +12,7 @@ import Sidebar from "../components/Sidebar";
 import "./index.css";
 import Footer from "../components/Footer";
 import Search from "../components/Search";
+import { useTheme } from "@material-ui/styles";
 
 const Layout: React.FC = ({ children }) => {
   const darkMode = useDarkMode();
@@ -67,7 +68,7 @@ const Layout: React.FC = ({ children }) => {
               <MenuIcon fontSize="small" />
             </IconButton>
             <Grid container alignContent="center" alignItems="center" justify="space-between">
-              <Grid item container direction="row" xs={4}>
+              <Grid item container direction="row" xs={5}>
                 <Grid style={{ paddingRight: "5px" }}>
                   <img
                     alt="logo"
@@ -85,8 +86,10 @@ const Layout: React.FC = ({ children }) => {
                   </GatsbyLink>
                 </Grid>
               </Grid>
-              <Grid item container direction="row" xs={8} justify="flex-end" alignItems="center">
-                <Search />
+              <Grid item container direction="row" xs={7} justify="flex-end" alignItems="center">
+                <Hidden only="xs">
+                  <Search />
+                </Hidden>
                 <Tooltip title={"Toggle Dark Mode"}>
                   <IconButton onClick={darkMode.toggle}>
                     {darkMode.value ? <Brightness3Icon fontSize="small" /> : <WbSunnyIcon fontSize="small" />}
