@@ -51,6 +51,12 @@ const Layout: React.FC = ({ children }) => {
           logoUrl
           primaryColor
           secondaryColor
+          enableSearch
+          menuLinks {
+            name
+            link
+            ignoreNextPrev
+          }
           footerLinks {
             name
             link
@@ -73,15 +79,20 @@ const Layout: React.FC = ({ children }) => {
           secondary: {
             ...theme.palette.secondary,
             main: data.site.siteMetadata.secondaryColor,
-          }
-        }
+          },
+        },
       }}>
-        <Sidebar open={open} onClose={() => setOpen(false)} />
+        <Typography>Length: {data.site.siteMetadata.length}</Typography>
+        {data.site.siteMetadata.menuLinks.length !== 1 &&
+          <Sidebar open={open} onClose={() => setOpen(false)} />
+        }
         <AppBar position="fixed" color="default" elevation={0}>
           <Toolbar>
-            <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon fontSize="small" />
-            </IconButton>
+            {data.site.siteMetadata.menuLinks.length !== 1 &&
+              <IconButton onClick={() => setOpen(true)}>
+                <MenuIcon fontSize="small" />
+              </IconButton>
+            }
             <Grid container alignContent="center" alignItems="center" justify="space-between">
               <Grid item container direction="row" xs={5}>
                 <Grid style={{ paddingRight: "5px" }}>
@@ -102,9 +113,11 @@ const Layout: React.FC = ({ children }) => {
                 </Grid>
               </Grid>
               <Grid item container direction="row" xs={7} justify="flex-end" alignItems="center">
-                <Hidden only="xs">
-                  <Search />
-                </Hidden>
+                {data.site.siteMetadata.enableSearch &&
+                  <Hidden only="xs">
+                    <Search />
+                  </Hidden>
+                }
                 <Tooltip title={"Toggle Dark Mode"}>
                   <IconButton onClick={darkMode.toggle}>
                     {darkMode.value ? <Brightness3Icon fontSize="small" /> : <WbSunnyIcon fontSize="small" />}
