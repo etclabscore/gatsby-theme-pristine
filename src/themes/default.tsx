@@ -30,9 +30,9 @@ const typography = {
     fontWeight: headerFontWeight,
   },
   body1: {
-    fontSize: "1rem",
+    fontSize: "1.06rem",
   },
-  fontSize: 20,
+  fontSize: 17,
   fontWeightRegular: 250,
   fontFamily: ["Helvetica", "Arial", "San-Serif"].join(","),
 };
