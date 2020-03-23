@@ -1,3 +1,11 @@
+## [1.1.5](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.4...1.1.5) (2020-03-23)
+
+
+### Bug Fixes
+
+* build needs node version >=10.18, updating to 12x stable ([42f0dd8](https://github.com/etclabscore/gatsby-theme-pristine/commit/42f0dd8357eed8445ac075160451cd43e80fba55))
+* changed default body font size to 17px ([d872a0f](https://github.com/etclabscore/gatsby-theme-pristine/commit/d872a0fff7f2e97a63d1992a34c93de06630ed84))
+
 ## [1.1.4](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.3...1.1.4) (2020-01-22)
 
 
