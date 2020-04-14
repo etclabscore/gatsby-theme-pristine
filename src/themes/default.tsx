@@ -1,7 +1,7 @@
-import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
-import grey from "@material-ui/core/colors/grey";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles"
+import grey from "@material-ui/core/colors/grey"
 
-const headerFontWeight = 400;
+const headerFontWeight = 400
 
 const typography = {
   h1: {
@@ -33,72 +33,88 @@ const typography = {
     fontSize: "1.06rem",
   },
   fontSize: 17,
-  fontWeightRegular: 250,
-  fontFamily: ["Helvetica", "Arial", "San-Serif"].join(","),
-};
+  fontWeightRegular: "normal",
+  fontFamily: [
+    "system-ui",
+    "apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+  ].join(","),
+}
 
-export const lightTheme = responsiveFontSizes(createMuiTheme({
-  props: {
-    MuiAppBar: {
-      position: "sticky",
-    },
-    MuiCard: {
-      elevation: 0,
-    },
-  },
-  overrides: {
-    MuiAppBar: {
-      root: {
-        background: "#fff !important",
+export const lightTheme = responsiveFontSizes(
+  createMuiTheme({
+    props: {
+      MuiAppBar: {
+        position: "sticky",
+      },
+      MuiCard: {
+        elevation: 0,
       },
     },
-  },
-  palette: {
-    text: {
-      primary: grey[900],
+    overrides: {
+      MuiAppBar: {
+        root: {
+          background: "#fff !important",
+        },
+      },
     },
-    background: {
-      default: "#fff",
+    palette: {
+      text: {
+        primary: grey[900],
+      },
+      background: {
+        default: "#fff",
+      },
     },
-  },
-  typography,
-}));
+    typography,
+  })
+)
 
-export const darkTheme = responsiveFontSizes(createMuiTheme({
-  props: {
-    MuiAppBar: {
-      position: "sticky",
-    },
-    MuiCard: {
-      elevation: 0,
-    },
-  },
-  palette: {
-    type: "dark",
-    text: {
-      primary: grey[400],
-    },
-    background: {
-      default: grey[900],
-      paper: grey[800],
-    },
-  },
-  overrides: {
-    MuiTable: {
-      root: {
-        background: "transparent !important",
+export const darkTheme = responsiveFontSizes(
+  createMuiTheme({
+    props: {
+      MuiAppBar: {
+        position: "sticky",
+      },
+      MuiCard: {
+        elevation: 0,
       },
     },
-    MuiTypography: {
-      root: {
-        color: grey[400],
+    palette: {
+      type: "dark",
+      text: {
+        primary: grey[400],
+      },
+      background: {
+        default: grey[900],
+        paper: grey[800],
       },
     },
-  },
-  typography,
-}));
+    overrides: {
+      MuiTable: {
+        root: {
+          background: "transparent !important",
+        },
+      },
+      MuiTypography: {
+        root: {
+          color: grey[400],
+        },
+      },
+    },
+    typography,
+  })
+)
 
 export default {
   darkTheme,
   lightTheme,
-};
+}
