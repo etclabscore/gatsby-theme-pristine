@@ -68,9 +68,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/etclabscore/gatsby-theme-pristine"
+    "url": "https://github.com/xops/gatsby-openrpc-theme"
   },
   "bugs": {
-    "url": "https://github.com/etclabscore/gatsby-theme-pristine/issues"
+    "url": "https://github.com/xops/gatsby-openrpc-theme/issues"
   }
 }
