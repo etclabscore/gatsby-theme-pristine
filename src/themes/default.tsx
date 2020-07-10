@@ -1,5 +1,7 @@
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import grey from "@material-ui/core/colors/grey";
+const lightBackground = "#fff";
+const darkBackground = grey[900];
 
 const headerFontWeight = 400;
 
@@ -47,16 +49,30 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
     },
   },
   overrides: {
+    MuiPaper: {
+      root: {
+        zIndex: 1,
+        opacity: 1,
+      },
+    },
+    MuiToolbar: {
+      root: {
+        backgroundColor: lightBackground,
+      },
+    },
     MuiAppBar: {
       root: {
-        background: "#fff !important",
+        backgroundColor: lightBackground,
+      },
+      colorDefault: {
+        backgroundColor: lightBackground,
+      },
+      colorPrimary: {
+        backgroundColor: lightBackground,
       },
     },
   },
   palette: {
-    text: {
-      primary: grey[900],
-    },
     background: {
       default: "#fff",
     },
@@ -69,24 +85,37 @@ export const darkTheme = responsiveFontSizes(createMuiTheme({
     MuiAppBar: {
       position: "sticky",
     },
-    MuiCard: {
-      elevation: 0,
-    },
   },
   palette: {
     type: "dark",
-    text: {
-      primary: grey[400],
-    },
     background: {
       default: grey[900],
-      paper: grey[800],
+      paper: grey[900],
     },
   },
   overrides: {
+    MuiPaper: {
+      root: {
+        zIndex: 1,
+        opacity: 1,
+      },
+    },
+    MuiAppBar: {
+      root: {
+        backgroundColor: darkBackground,
+      },
+      colorPrimary: {
+        backgroundColor: darkBackground,
+      },
+    },
+    MuiToolbar: {
+      root: {
+        backgroundColor: darkBackground,
+      },
+    },
     MuiTable: {
       root: {
-        background: "transparent !important",
+        backgroundColor: darkBackground,
       },
     },
     MuiTypography: {

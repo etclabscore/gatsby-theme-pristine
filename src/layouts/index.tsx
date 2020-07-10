@@ -76,6 +76,7 @@ const Layout: React.FC = ({ children }) => {
           }
         }
       }}>
+        <CssBaseline />
         <Sidebar open={open} onClose={() => setOpen(false)} />
         <AppBar position="fixed" color="default" elevation={0}>
           <Toolbar>
@@ -102,9 +103,6 @@ const Layout: React.FC = ({ children }) => {
                 </Grid>
               </Grid>
               <Grid item container direction="row" xs={7} justify="flex-end" alignItems="center">
-                <Hidden only="xs">
-                  <Search />
-                </Hidden>
                 <Tooltip title={"Toggle Dark Mode"}>
                   <IconButton onClick={darkMode.toggle}>
                     {darkMode.value ? <Brightness3Icon fontSize="small" /> : <WbSunnyIcon fontSize="small" />}
@@ -114,13 +112,10 @@ const Layout: React.FC = ({ children }) => {
             </Grid>
           </Toolbar>
         </AppBar>
-        <Container>
-          <CssBaseline />
-          <div style={{ padding: "30px", paddingTop: "64px" }}>
-            {children}
-            <Footer footerLinks={data.site.siteMetadata.footerLinks} />
-          </div>
-        </Container>
+        <div style={{ paddingTop: "64px" }}>
+          {children}
+          {/* <Footer footerLinks={data.site.siteMetadata.footerLinks} /> */}
+        </div>
       </MuiThemeProvider >
     </MDXProvider >
   );
