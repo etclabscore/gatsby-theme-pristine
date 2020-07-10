@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/xops/gatsby-openrpc-theme/compare/1.1.7...1.1.8) (2020-07-10)
+
+
+### Bug Fixes
+
+* add reusable provider wrapper ([df049d9](https://github.com/xops/gatsby-openrpc-theme/commit/df049d904e70669ac1a1e4db1845e238215f1182))
+
 ## [1.1.7](https://github.com/xops/gatsby-openrpc-theme/compare/1.1.6...1.1.7) (2020-07-10)
 
 
