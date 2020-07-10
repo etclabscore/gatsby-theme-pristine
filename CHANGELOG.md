@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/xops/gatsby-openrpc-theme/compare/1.1.6...1.1.7) (2020-07-10)
+
+
+### Bug Fixes
+
+* remove search ([e1da1be](https://github.com/xops/gatsby-openrpc-theme/commit/e1da1be5811ba7f5c27c69da3e6e7752721a854c))
+
 ## [1.1.6](https://github.com/xops/gatsby-openrpc-theme/compare/1.1.5...1.1.6) (2020-07-10)
 
 
