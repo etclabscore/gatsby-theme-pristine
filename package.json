@@ -1,6 +1,6 @@
 {
-  "name": "@etclabscore/gatsby-theme-pristine",
-  "description": "A pristine theme for typescript, gatsby, and material-ui",
+  "name": "@xops.net/gatsby-openrpc-theme",
+  "description": "A gatsby theme for generated OpenRPC documentation",
   "version": "0.0.0-development",
   "publishConfig": {
     "access": "public"
@@ -12,11 +12,9 @@
     "@mdx-js/mdx": "^1.5.4",
     "@mdx-js/react": "^1.5.4",
     "@open-rpc/docs-react": "^1.1.4",
-    "flexsearch": "^0.6.32",
     "gatsby": "^2.18.25",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-layout": "^1.1.21",
-    "gatsby-plugin-local-search": "^1.1.0",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-mdx": "^1.0.67",
@@ -41,7 +39,6 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-syntax-highlighter": "^12.2.1",
-    "react-use-flexsearch": "^0.1.1",
     "remark-emoji": "^2.0.2",
     "slash": "^3.0.0",
     "use-dark-mode": "^2.3.1"
