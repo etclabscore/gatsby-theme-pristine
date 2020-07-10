@@ -1,3 +1,12 @@
+## [1.1.6](https://github.com/xops/gatsby-openrpc-theme/compare/1.1.5...1.1.6) (2020-07-10)
+
+
+### Bug Fixes
+
+* **package.json:** repository + bugs url ([b1cc57a](https://github.com/xops/gatsby-openrpc-theme/commit/b1cc57a0f33d5853d1b9cf33f62533a8986192d1))
+* add openrpc theme ([cd24bbb](https://github.com/xops/gatsby-openrpc-theme/commit/cd24bbb8a26c0b2391a32d451ee8927494797f7d))
+* naming + remove unused plugins ([4079632](https://github.com/xops/gatsby-openrpc-theme/commit/40796328690aa8d1c7dec638848d6fb933fb9f48))
+
 ## [1.1.5](https://github.com/etclabscore/gatsby-theme-pristine/compare/1.1.4...1.1.5) (2020-03-23)
 
 
