@@ -11,7 +11,6 @@ import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby";
 import Sidebar from "../components/Sidebar";
 import "./index.css";
 import Footer from "../components/Footer";
-import Search from "../components/Search";
 import { useTheme } from "@material-ui/styles";
 
 const Layout: React.FC = ({ children }) => {
