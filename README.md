@@ -7,7 +7,7 @@
 1. Install:
 
 ```
-npm install @etclabscore/gatsby-theme-pristine
+npm install @xops.net/gatsby-openrpc-theme
 ```
 
 2. Add as a plugin to your Gatsby config:
@@ -17,7 +17,7 @@ npm install @etclabscore/gatsby-theme-pristine
 ```javascript
   //...
   plugins: [
-    "@etclabscore/gatsby-theme-pristine"
+    "@xops.net/gatsby-openrpc-theme"
   ],
   //...
 ```
