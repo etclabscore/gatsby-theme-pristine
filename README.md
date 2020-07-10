@@ -1,4 +1,4 @@
-# gatsby-theme-pristine
+# gatsby-openrpc-theme
 
 
 ## Usage
