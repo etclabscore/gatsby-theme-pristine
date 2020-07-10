@@ -10,6 +10,7 @@ import CodeBlock from "../components/CodeBlock";
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby";
 import Sidebar from "../components/Sidebar";
 import "./index.css";
+import { ReusableProvider } from "reusable";
 import Footer from "../components/Footer";
 import { useTheme } from "@material-ui/styles";
 
@@ -72,8 +73,8 @@ const Layout: React.FC = ({ children }) => {
           secondary: {
             ...theme.palette.secondary,
             main: data.site.siteMetadata.secondaryColor,
-          }
-        }
+          },
+        },
       }}>
         <CssBaseline />
         <Sidebar open={open} onClose={() => setOpen(false)} />
