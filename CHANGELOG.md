@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/xops/gatsby-openrpc-theme/compare/1.1.8...1.2.0) (2020-08-27)
+
+
+### Features
+
+* add dark theme primary + secondary color configuration ([59a148c](https://github.com/xops/gatsby-openrpc-theme/commit/59a148c83496933f8a43b0b57dd5060e9fa2a514))
+
 ## [1.1.8](https://github.com/xops/gatsby-openrpc-theme/compare/1.1.7...1.1.8) (2020-07-10)
 
 
