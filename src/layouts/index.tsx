@@ -50,7 +50,9 @@ const Layout: React.FC = ({ children }) => {
           description
           logoUrl
           primaryColor
+          primaryColorDark
           secondaryColor
+          secondaryColorDark
           footerLinks {
             name
             link
@@ -68,11 +70,11 @@ const Layout: React.FC = ({ children }) => {
           ...theme.palette,
           primary: {
             ...theme.palette.primary,
-            main: data.site.siteMetadata.primaryColor,
+            main: darkMode.value ? data.site.siteMetadata.primaryColorDark : data.site.siteMetadata.primaryColor,
           },
           secondary: {
             ...theme.palette.secondary,
-            main: data.site.siteMetadata.secondaryColor,
+            main: darkMode.value ? data.site.siteMetadata.secondaryColorDark : data.site.siteMetadata.secondaryColor,
           },
         },
       }}>
